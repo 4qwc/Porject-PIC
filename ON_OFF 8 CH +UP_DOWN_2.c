@@ -1,3 +1,7 @@
+//progame 
+// IDE CCS C compiler
+//by hs4qwc 
+
 #include <18f252.h>
 #fuses NOWDT,NOPROTECT,NOLVP,XT
 #use delay(clock=4000000)
@@ -5,7 +9,7 @@
 #use fast_io(b)
 #use fast_io(c)
 
-/* ตั้งชื่อ แทนตำแหน่ง ADDRESS  หรือ รีจิสตอร์ใช้งาน*/
+/* เธ•เธฑเนเธเธเธทเนเธญ เธ•เธณเนเธซเธเนเธ ADDRESS RIGISTER*/
 
 #byte PA = getenv("sfr:PORTA")
 #byte PB = getenv("sfr:PORTB")
@@ -35,23 +39,23 @@
 #BIT CH8 = PC.7
 
 
-/*    ประกาศตัวแปร */
+/* value */
 //int a,b,c;
 
 short F_C1,F_C2,F_C3, F_A0,F_A1,F_R1,F_R2,F_R3,F_R4,F_R5;
  
 void main()
 {
-        /*  เซ็ทค่าเริ่มต้น  */
+        /*  setup defult  */
         set_tris_a(0x03);
-        set_tris_b(0xff);   // กำหนดให้ PORT B เป็น OUTPUT หมดทั้ง 8 บิท
+        set_tris_b(0xff);   // ยกร“รยนยดรฃรรฉ PORT B ร ยปรงยน OUTPUT รรยดยทร‘รฉยง 8 ยบร”ยท
         set_tris_c(0);
         
-        PC=0;        //------------กำหนดค่าเริ่มต้น portC//-----------------------
+        PC=0;        //------------ยกร“รยนยดยครจร’ร รร”รจรยตรฉยน portC//-----------------------
         MOTOR1=0;
         MOTOR2=0;
         
-         //---------*  ส่วนทำงาน *-----------------------/
+         //---------*  รรจรยนยทร“ยงร’ยน *-----------------------/
         while(true)//----for(;;)----//
          {
                      
